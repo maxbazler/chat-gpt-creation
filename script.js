@@ -33,6 +33,45 @@
 })();
 
 
+const canvas = document.getElementById('trail');
+const context = canvas.getContext('2d');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let mouseX = canvas.width / 2;
+let mouseY = canvas.height / 2;
+
+document.addEventListener('mousemove', event => {
+    mouseX = event.clientX;
+    mouseY = event.clientY;
+});
+
+function updateTrail() {
+    context.fillStyle = 'rgba(0, 0, 0, 0.1)';
+    context.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Limit the position of the cursor to the bounds of the canvas
+    const trailRadius = 10;
+    const trailX = Math.max(trailRadius, Math.min(mouseX, canvas.width - trailRadius));
+    const trailY = Math.max(trailRadius, Math.min(mouseY, canvas.height - trailRadius));
+
+    context.beginPath();
+    context.arc(trailX, trailY, trailRadius, 0, 2 * Math.PI, false);
+    context.fillStyle = 'white';
+    context.fill();
+
+    requestAnimationFrame(updateTrail);
+}
+
+updateTrail();
+
+
+
+
+
+
+
 window.onload = function() {
     const app = new PIXI.Application({
         width: window.innerWidth,
