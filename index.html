@@ -2,26 +2,25 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>빗방울 | ChatGPT Project by Max Bazler</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
     <canvas id="trail"></canvas>
+
     <div class="city-parallax">
-        <img class="city-p p01" src="images/city/p01.jpg" data-speed="1">
-        <img class="city-p p02" src="images/city/p02.png" data-speed="2">
-        <img class="city-p p03" src="images/city/p03.png" data-speed="3">
+        <img class="city-p p01" src="images/city/p01.webp" data-speed="1" />
+        <img class="city-p p02" src="images/city/p02.webp" data-speed="2" />
+        <img class="city-p p03" src="images/city/p03.webp" data-speed="3" />
     </div>
 
-    <!-- <img class="city" src="images/neon-city.png" alt="city"> -->
-    <img class="glitch-overlay" src="images/glitch.gif" alt="glitch">
-    <img class="texture-overlay" src="images/smoke.jpg" alt="smoke">
+    <img class="glitch-overlay" src="images/glitch.gif" alt="glitch" />
+    <img class="texture-overlay" src="images/smoke.webp" alt="smoke" />
 
     <div id="pixi-container"></div>
     <div class="grain"></div>
@@ -29,8 +28,10 @@
     <div class="hero-container">
         <h1 class="hero glitch layers" data-text="빗방울"><span>빗방울</span></h1>
     </div>
+
     <div class="gradient"></div>
     <div class="screen-overlay"></div>
+
     <div class="border-wrapper">
         <div class="border"></div>
     </div>
@@ -38,10 +39,9 @@
     <div class="main-cursor">
         <div class="diamond"></div>
     </div>
+
     <div class="top-cursor"></div>
-
     <div class="box"></div>
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.2.1/pixi.min.js" integrity="sha512-frZvVhTPU0FZDCSm60T5IbjfpJHRPKFHHxxZiHzooIo3HISl95y8USkvsflkeG9TaqxDOBkpPxC6ZBV0R1V/Yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

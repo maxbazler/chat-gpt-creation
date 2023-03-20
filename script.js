@@ -46,11 +46,14 @@ document.addEventListener('mousemove', parallax);
 const canvas = document.getElementById('trail');
 const context = canvas.getContext('2d');
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    mouseX = canvas.width / 2;
+    mouseY = canvas.height / 2;
+}
 
-let mouseX = canvas.width / 2;
-let mouseY = canvas.height / 2;
+resizeCanvas(); // Set initial canvas dimensions and mouse position
 
 document.addEventListener('mousemove', event => {
     mouseX = event.clientX;
@@ -75,6 +78,9 @@ function updateTrail() {
 }
 
 updateTrail();
+
+window.addEventListener('resize', resizeCanvas); // Add event listener for window resize
+
 
 
 
